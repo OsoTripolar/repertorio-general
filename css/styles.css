@@ -37,12 +37,13 @@ a:hover{
 
 /* ESTILOS POR BLOQUES */
 
-/* Header */
-
 .container{
     width: 90%;
     margin: 0 auto;
 }
+
+/* Header */
+
 
 
 .header{
@@ -55,6 +56,7 @@ a:hover{
     /* padding: 0.3em 0; */
 
     background-color: var(--color1);
+    z-index: 1;
 }
 
 .header__container{
@@ -87,17 +89,50 @@ a:hover{
 
 .repertorio__lista-temas{
 
+    list-style-type: none;
+    padding-left: 1em;
     margin-top: 0.5em;
     color: var(--color2);
 }
 
 .repertorio__cancion{
-    margin-top: 0.2em;
+    margin-top: 0.5em;
+    font-size: 1.2em;
+
+}
+
+.repertorio__cancion__propiedades{
+    display: flex;
+    align-items: center;
+    padding-left: 1em;
 }
 
 .repertorio__calificacion{
+    display: none;
     margin-left: 1em;
     color: rgb(179, 179, 179);
+    position: relative;
+    top: -0.1em;
+}
+
+.repertorio__calificacion:hover{
+    cursor: pointer;
+}
+
+.repertorio__comentario{
+    color: gray;
+    display: none;
+    background-color: rgb(207, 241, 255);
+    font-size: 0.8em;
+    padding: 0.3em;
+    border: solid 1px var(--color1);
+    border-radius: 0.5em;
+    left: 22em;
+    position: absolute;
+}
+
+.repertorio__calificacion:hover + .repertorio__comentario{
+    display: inline-block;
 }
 
 .repertorio__cancion__link{
@@ -107,7 +142,16 @@ a:hover{
 
 /* Footer */
 
+.footer__container{
+    height: 100%;
+    display: flex;
+}
+
 .footer{
     background-color: var(--color1);
     height: 5.5em;
+}
+
+.confirmador{
+    margin: auto
 }
