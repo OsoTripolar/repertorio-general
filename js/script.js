@@ -1,4 +1,6 @@
+
 document.getElementById('activador').addEventListener('input', function() {
+
     var inputValue = this.value;
     var calificaciones = document.querySelectorAll('.repertorio__calificacion');
     
@@ -10,5 +12,15 @@ document.getElementById('activador').addEventListener('input', function() {
         calificaciones.forEach(function(calificacion) {
             calificacion.style.display = 'none'; // O 'block', según cómo quieras que se muestre
         });
+    }
+
+});
+
+document.addEventListener('keydown', function(event) {
+    // Verifica si la tecla presionada es la "l" (minúscula)
+    if (event.key === 'l') {
+        event.preventDefault(); // Evita que la "l" se escriba en el input
+        // Redirige al formulario en el footer
+        document.getElementById('activador').focus(); // Lleva el foco al campo de entrada del formulario
     }
 });

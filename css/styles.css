@@ -140,6 +140,10 @@ a:hover{
     color: var(--color1);
 }
 
+.repertorio__artista{
+    margin: 2em 0;
+}
+
 /* Footer */
 
 .footer__container{
